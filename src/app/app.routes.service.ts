@@ -12,6 +12,7 @@ import { NotFoundComponent } from './views/errors/not-found/not-found.component'
 
 import { DetailspostComponent } from './views/detailspost/detailspost.component';
 import { PagecontentComponent } from './views/pagecontent/pagecontent.component';
+import { FaceRegconizeComponent } from './views/faceregconize/faceregconize.component';
 import { TextEditorComponent } from './views/texteditor/texteditor.component';
 import { Demo1Component } from './views/demo1/demo1.component';
 
@@ -61,6 +62,11 @@ const routes: Route[] = [
   { path: 'Nhom3/students', children:
     [
       { path: '', component: Nhom3Component },
+    ]
+  },
+  { path: 'facedemo', children:
+    [
+      { path: '', component: FaceRegconizeComponent },
     ]
   },
   { path: 'dashboards', children:

@@ -18,8 +18,10 @@ import { TextEditorComponent } from './texteditor/texteditor.component';
 import { PagecontentComponent } from './pagecontent/pagecontent.component';
 import { DetailspostComponent } from './detailspost/detailspost.component';
 import { EmployeeService } from '../services/employee.service';
+import { FaceRegconizeService } from '../services/faceregconize.service';
 import { LoginService } from '../services/login.service';
 import { ContentService } from '../services/content.service';
+import { FaceRegconizeComponent } from './faceregconize/faceregconize.component';
 import { Map1Component } from './maps/map1/map1.component';
 import { StatsCardComponent } from './dashboards/common/stats-card/stats-card.component';
 import { StatsCard2Component } from './dashboards/common/stats-card2/stats-card2.component';
@@ -72,6 +74,7 @@ import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
     Dashboard1Component,
     Profile1Component,
     HelpComponent,
+    FaceRegconizeComponent,
     NotFoundComponent
   ],
   exports: [
@@ -88,9 +91,10 @@ import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
     Map1Component,
     StatsCardComponent,  
     Dashboard1Component,
+    FaceRegconizeComponent,
     NotFoundComponent
   ],
-  providers: [EmployeeService, LoginService, ContentService],
+  providers: [EmployeeService, LoginService, ContentService, FaceRegconizeService],
   schemas: [NO_ERRORS_SCHEMA]
 })
 export class ViewsModule { }
