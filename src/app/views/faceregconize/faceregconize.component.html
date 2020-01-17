@@ -1,11 +1,30 @@
-<div>  
-  <div class="row">  
-    <div class="col-sm-12 btn card-header">  
-        <h1>Face regconize</h1> 
-    </div>
-    
-	<input #file type="file" name="fileImage" id="fileImage" />
-    <input class="btn btn-primary" type="button" value="Regconize" (click)="process()" />
-	<img #img src="./assets/logo/logoc8d58f8-62.png">
-    </div>
-</div>
+<mdb-card>
+   <mdb-card-header><h1>Face regconize</h1></mdb-card-header>
+   <mdb-card-body>
+      <div class="row">
+	 <div class="col-2"></div>
+         <div class="col-8">
+            <div class="row mb-3">
+               <div class="col-6">
+                  <span (click)="openFileDialog()" class="btn btn-primary">Select an image</span>
+                  <input style="display: none;" (change)="previewImage()" #file type="file" name="fileImage" id="fileImage" />
+               </div>
+               <div class="col-6">
+                  <span class="btn btn-success" type="button" (click)="process()">Regconize</span>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-6">
+                  <p><strong>Preview</strong></p>
+                  <div #imgPreview id="imgPreview"></div>
+               </div>
+               <div class="col-6">
+                  <p><strong>Result</strong></p>
+                  <div #img id="img"></div>
+               </div>
+            </div>
+         </div>
+	<div class="col-2"></div>
+      </div>
+   </mdb-card-body>
+</mdb-card>
